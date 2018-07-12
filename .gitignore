@@ -1,0 +1,5 @@
+# JetBrains Projects
+.idea/
+
+# Mac-specific
+.DS_Store
