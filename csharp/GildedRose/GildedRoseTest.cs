@@ -11,18 +11,18 @@ namespace csharp
         [Test]
         public void LegendaryItem_QualityDoesNotDecrease() {
             // Arrange
-            GildedRose app = new GildedRose(createItemList("Sulfuras, Hand of Ragnaros", 20, 33));
+            GildedRose app = new GildedRose(createItemList("Sulfuras, Hand of Ragnaros", 20, 80));
     
             // Act
             app.UpdateQuality();
     
             // Assert
-            Assert.AreEqual(33, app.Items[0].Quality, "Quality is not decreased for this legendary item");
+            Assert.AreEqual(80, app.Items[0].Quality, "Quality is not decreased for this legendary item");
         }
     
         [Test]
         public void LegendaryItem_NeverHasToBeSold() {
-            GildedRose app = new GildedRose(createItemList("Sulfuras, Hand of Ragnaros", 1, 17));
+            GildedRose app = new GildedRose(createItemList("Sulfuras, Hand of Ragnaros", 1, 80));
             app.UpdateQuality();
             Assert.AreEqual(1, app.Items[0].SellIn, "Sellin is not decreased for this legendary item");
         }
